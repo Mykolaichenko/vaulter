@@ -16,7 +16,7 @@ import (
 
 var result_slice []string
 
-
+//https://www.vaultproject.io/api/overview.html
 func status_code_handler(status_code int) error {
 	switch status_code  {
 	case 200:
@@ -70,7 +70,7 @@ func read_http_api(url, token string) (data []byte, err error) {
 	return body_data, nil
 }
 
-
+//https://www.vaultproject.io/docs/commands/token/lookup.html
 func verify_connection(c *cli.Context) error {
 	vault_addr := c.String("vault_addr")
 	vault_token := c.String("vault_token")
